@@ -19,13 +19,15 @@
   <meta name="author" content="青禾">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="website">
+    <meta name="description" content="&#x2F;&#x2F; 使用 DOMContentLoaded 事件确保 DOM 构建完成后执行脚本       document.addEventListener(&#39;DOMContentLoaded&#39;, function() &#123;       const originalContent &#x3D; &quot;graph LR\n  A[Start] --&gt; B[Step 1]">
+<meta property="og:type" content="website">
 <meta property="og:title" content="about">
 <meta property="og:url" content="https://qinghehe.site/about/index.html">
 <meta property="og:site_name" content="青禾">
+<meta property="og:description" content="&#x2F;&#x2F; 使用 DOMContentLoaded 事件确保 DOM 构建完成后执行脚本       document.addEventListener(&#39;DOMContentLoaded&#39;, function() &#123;       const originalContent &#x3D; &quot;graph LR\n  A[Start] --&gt; B[Step 1]">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-12-18T08:33:47.000Z">
-<meta property="article:modified_time" content="2024-12-19T12:34:42.634Z">
+<meta property="article:modified_time" content="2024-12-24T07:59:30.216Z">
 <meta property="article:author" content="青禾">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -76,7 +78,11 @@
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<!-- hexo injector head_end start --><script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.esm.min.mjs">
+    mermaid.initialize(
+      startOnLoad: true,
+    );
+    </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -219,7 +225,19 @@
                 
 
 <article class="page-content">
-  
+  <pre class="mermaid" id="mermaid"></pre><script>
+<pre><code class="hljs">      // 使用 DOMContentLoaded 事件确保 DOM 构建完成后执行脚本
+      document.addEventListener(&#39;DOMContentLoaded&#39;, function() &#123;
+      const originalContent = &quot;graph LR\n  A[Start] --&gt; B[Step 1]\n  B --&gt; C[Step 2]\n  C --&gt; D[End]&quot;;
+      const mermaid = document.getElementById(&#39;mermaid&#39;);
+      // 创建文本节点并设置内容
+      const textNode = document.createTextNode(originalContent);
+      // 将文本节点添加到元素中
+      mermaid.appendChild(textNode);
+    &#125;);
+  &lt;/script&gt;
+</code></pre>
+
 
   
 
