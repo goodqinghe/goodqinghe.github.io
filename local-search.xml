@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>hexo命令备忘录</title>
+    <link href="/2025/06/06/hexo%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/"/>
+    <url>/2025/06/06/hexo%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Hexo-命令备忘录"><a href="#Hexo-命令备忘录" class="headerlink" title="Hexo 命令备忘录"></a>Hexo 命令备忘录</h2><h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><ul><li>新建一篇文章。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new <span class="hljs-string">&quot;文章标题&quot;</span><br></code></pre></td></tr></table></figure><h3 id="部分命令选项"><a href="#部分命令选项" class="headerlink" title="部分命令选项"></a>部分命令选项</h3><h3 id="文件内参数解释"><a href="#文件内参数解释" class="headerlink" title="文件内参数解释"></a>文件内参数解释</h3><ul><li><code>title</code>：文章标题</li><li><code>date</code>：文章日期</li><li><code>tags</code>：文章标签</li><li><code>categories</code>：文章分类</li></ul><blockquote><p>[!note]</p><ul><li><strong>tags</strong>：用于对文章进行更细的标签化分类，比如主题、技术栈等。</li><li><strong>categories</strong>：用于更高层次的文章分组，比如“前端”“后端”等。<br>如果在 <code>front-matter</code> 中添加了 <code>tags</code> 或 <code>categories</code>，Hexo 会自动生成对应的页面，一般无需手动创建。如果想要自定义结构，可以在 Hexo 配置中调整目录或路径。</li></ul></blockquote><ul><li>关于 <em><strong>front matter</strong></em></li></ul><blockquote><p>[!tip]</p><p>在 Hexo 博客系统中，文章文件开头的那些用 <code>---</code> 分隔的元信息部分就叫做 <em>front matter</em>。它通常包含如 <code>title</code>、<code>date</code>、<code>tags</code>、<code>categories</code> 等字段，用来告诉 Hexo 如何处理和生成这篇文章。</p><p>在 Hexo 的 <em>front matter</em> 中，<code>tags</code> 通常写成列表形式，例如：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">文章标题</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2025-06-06</span><br><span class="hljs-attr">tags:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">前端</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">JavaScript</span><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br></code></pre></td></tr></table></figure><p>或者使用单行也可以：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">文章标题</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2025-06-06</span><br><span class="hljs-attr">tags:</span> [<span class="hljs-string">前端</span>, <span class="hljs-string">JavaScript</span>]<br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure></blockquote><ul><li>关于 Hexo <code>categories</code> 的分类问题</li></ul><blockquote><p>[!tip]</p><p>在 Hexo 中，<code>categories</code> 字段既可以是一个字符串，也可以是一个数组。如果需要多个分类，可以写成数组形式，例如：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">categories:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">前端</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">React</span><br></code></pre></td></tr></table></figure><p>这样文章就会同时属于“前端”和“React”这两个分类。</p></blockquote><h2 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server<br></code></pre></td></tr></table></figure><p>启动本地服务器预览博客。</p><h2 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo generate<br></code></pre></td></tr></table></figure><p>生成静态页面。</p><h2 id="部署到远程"><a href="#部署到远程" class="headerlink" title="部署到远程"></a>部署到远程</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo deploy<br></code></pre></td></tr></table></figure><p>部署到配置好的远程仓库。</p><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul><li><a href="https://hexo.io/docs/">Hexo 文档</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo命令</tag>
+      
+      <tag>备忘录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>2024 年度总结</title>
     <link href="/2024/12/31/2024-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
     <url>/2024/12/31/2024-%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</url>
