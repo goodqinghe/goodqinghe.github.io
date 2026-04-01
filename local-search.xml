@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Quarkdown 博客搭建记录</title>
+    <link href="/2026/04/01/quarkdown-setup/"/>
+    <url>/2026/04/01/quarkdown-setup/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Quarkdown-博客搭建记录"><a href="#Quarkdown-博客搭建记录" class="headerlink" title="Quarkdown 博客搭建记录"></a>Quarkdown 博客搭建记录</h1><h2 id="我的想法"><a href="#我的想法" class="headerlink" title="我的想法"></a>我的想法</h2><blockquote><p>主要是这个博客长时间没有更新，新搭建了一个博客，但是感觉自己不是很习惯，最后又准备迁回这个博客了。</p></blockquote><p><a href="https://blog.qinghelog.top/00_quark-blog-setup/">搭建记录引用链接</a></p><blockquote><p>想要去整理，但是不知道自己有没有那个精力去整理，这个看看再说吧。</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>quarkdown</category>
+      
+      <category>blog</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>quarkdown</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>hexo命令备忘录</title>
     <link href="/2025/06/06/hexo%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/"/>
     <url>/2025/06/06/hexo%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95/</url>
